@@ -1,6 +1,6 @@
-import { TuiRoot } from "@taiga-ui/core";
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TuiRoot, TUI_DARK_MODE } from '@taiga-ui/core';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +10,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('TransMaker');
+  protected readonly darkMode = inject(TUI_DARK_MODE);
 }
